@@ -1,0 +1,14 @@
+int dequeue(){
+  if(front == -1 || front > rear){
+    printf("Q is empty!!\n");
+    return -1;
+  } else {
+    int x = queue[front];
+    front++;
+    if(front > rear){ // queue is now empty
+      front = rear = -1;
+    }
+    printf("%d has been dequeued\n", x);
+    return x;
+  }
+}
